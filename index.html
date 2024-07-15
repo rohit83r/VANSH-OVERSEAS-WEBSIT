@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <style type="text/tailwindcss">
+    </style>
+    <title>VANSH OVERSEAS</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src= 
+"https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"> 
+      </script> 
+      <script src="./index.js"></script>
+      <style>
+        .carousel { 
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+  background-color: #cdcdcd; 
+
+  
+} 
+
+.carousel-item .slide-image { 
+  width: 100%; 
+  height: 100%;
+  background-size: cover; /* or 'cover' depending on your preference */
+  background-repeat: no-repeat; 
+  background-position: center;
+
+} 
+
+.carousel-item { 
+  position: absolute; 
+  width: 100%; 
+  height: 100%; /* changed from 270px to 100% to maintain responsiveness */
+  border: none; 
+  top: 0; 
+  left: 100%; 
+
+} 
+
+ 
+.carousel-item.active { 
+    left: 0; 
+    transition: all 0.3s ease-out; 
+} 
+  
+.carousel-item div { 
+    height: 100%; 
+} 
+  
+.red { 
+    background-color: red; 
+} 
+  
+.green { 
+    background-color: green; 
+} 
+  
+.yellow { 
+    background-color: yellow; 
+} 
+  
+.violet { 
+    background-color: violet; 
+}
+        
+
+        #preloader {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #preloader img {
+            width: 150px;
+            height: 150px;
+            animation: pulse 20s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(90deg); }
+            50% { transform: rotate(180deg); }
+            75% { transform: rotate(270deg); }  
+            100% { transform: rotate(360deg); }
+        }
+        
+
+#background-video {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+/* page content */
+
+
+
+
+@media (max-width: 750px) {
+    body {
+      background-size: cover;
+    }
+}
+
+main {
+  background-color: rgb(208, 217, 220);
+  margin-top: 50vh;
+  padding: 10px;
+  position: relative;
+}
+
+
+      </style>
+      
+
+</head>
+
+<body class="bg-white">
+    <div id="preloader">
+        <img src="logo.jpg" alt="Vansh Overseas">
+        <p class="ml-2 text-xl">VANSH OVERSEAS</p>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            document.getElementById('preloader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        });
+    </script>
+     <header class="z-9999">
+        <nav class="flex justify-between bg-black w-full items-center mx-auto">
+            <div class="w-16 font-bold text-black">
+                <div class="flex flex-row m-1">
+                    <a href="/dist/index.html">
+                        <img class="w-12 h-12 m-4" src="images/logo.jpg" alt="">
+                        <div>
+                            <p class="ml-2 text-xl text-white">VANSH OVERSEAS</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-links z-10 duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="/dist/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="/dist/cate.html">Categories</a>
+                    </li>
+                    <li>
+                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="#contact">Contact Support</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer bg-blue-50"></ion-icon>
+            </div>
+        </nav>
+    </header>
+    <video id="background-video" autoplay loop muted >
+        <source src="bg.mp4" type="video/mp4">
+      </video>
+      
+      <h1 class="text-xl font-bold text-center text-white">VANSH OVERSEAS</h1>
+      <h2 class="text-sm font-bold text-center text-white">Leading Manufacturer and Exporter</h2>
+    
+    
+    
+    <script> 
+        const navLinks = document.querySelector('.nav-links') 
+        function onToggleMenu(e) { 
+            e.name = e.name === 'menu' ? 'close' : 'menu' 
+            navLinks.classList.toggle('top-[6%]') 
+        } 
+    </script> 
+    <MAIN>
+        <div class="flex flex-col items-center -z-0">
+            <div class=" md:w-[700px] w-[80vw] md:h-[500px] 
+            h-[40vw] overflow-y-hidden mt-10 outline 
+            outline-">
+            <div class="carousel  delay-1"> 
+                <div class="carousel-item"> 
+                    <div class="slide-image"
+                        style="background-image: url('images/21.jpg');"> 
+                    </div> 
+                </div> 
+                <div class="carousel-item"> 
+                    <div class="slide-image"
+                        style="background-image:url('images/13.jpg');"> 
+                    </div> 
+                </div> 
+                <div class="carousel-item"> 
+                    <div class="slide-image"
+                        style="background-image:  
+        url(images/2.jpg);"> 
+                    </div> 
+                </div> 
+                <div class="carousel-item"> 
+                    <div class="slide-image"
+                        style="background-image:  
+        url('images/32.jpg');"> 
+                    </div> 
+                </div>
+                <div class="carousel-item"> 
+                    <div class="slide-image"
+                        style="background-image:  
+        url('images/1.jpg');"> 
+                    </div> 
+                </div> 
+                <div class="carousel-item"> 
+                    <div class="slide-image"
+                        style="background-image:  
+        url(images/3.jpg);"> 
+                    </div> 
+                </div> 
+                <div class="carousel-item"> 
+                    <div class="slide-image"
+                        style="background-image:  
+        url('images/5.jpg');"> 
+                    </div> 
+                </div> 
+            </div>
+        </div> 
+      
+        <script src="./index.js"></script>
+        
+    
+        </div>
+        <div class="mt-4 pt-2 bg-amber-50 p-6 rounded-lg shadow-lg  max-w-sm mx-auto">
+            <h2 class="font-semibold text-black text-2xl mb-4">KEY HIGHLIGHTS</h2>
+            <div class="space-y-4">
+              <div>
+                <p class="text-3xl font-bold text-highlight">30+</p>
+                <p class="text-lg font-medium text-amber-300">YEARS OF EXCELLENCE</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-highlight">10+</p>
+                <p class="text-lg font-medium text-amber-300">EXPORTING COUNTRIES</p>
+              </div>
+              
+              <div>
+                <p class="text-3xl font-bold text-highlight">1000+</p>
+                <p class="text-lg font-medium text-amber-300">UNITS</p>
+              </div>
+            </div>
+            <div class="
+            flex justify-center">
+                <img class="w-14 h-14 bg-amber-50"  src="images/globe.gif" alt="">
+    
+            </div>
+          </div>
+          
+        <div>
+            <div class="flex justify-center">
+                <div class="w-2/3 space-y-3 m-10 p-6">
+    
+                    <div id="about">
+                        <p class="font-medium -mt-7">VANSH OVERSEAS was created with a dream to become one of leading
+                            India’s premier manufacturing and exporting of stainless steel utensils,cutlery and metal
+                            handicrafts Established in the year 2004. A JPOP Group of company established in 1929.since then
+                            it has got an extraordinary position in the kitchen utensils,cutlery and metal handicrafts world
+                            and its success is based on delivering cost-effective, design-led resolutions tailored to suit
+                            customers’ exact needs</p>
+                    </div>
+    
+                    <div>
+                        <h3 class="font-medium ">Our product range</h3>
+                        <p>We offer a wide range of Dinnerware, Serveware & Storage, Cutlery, Cookware, Bar Accessories,
+                            Tray and many more products.
+                        </p>
+                    </div>
+    
+                    <div>
+                        <h3 class="font-medium ">Our establishment and strength</h3>
+                        <p>We have progressively developed into a truly expert company by financing in a dedicated &
+                            qualified team of specialists from many fields of industry.
+                        </p>
+                    </div>
+    
+                    <div>
+                        <h3 class="font-medium ">Our specialist</h3>
+                        <p>We are privileged by our excellent name for reliability and service which are insistent by our
+                            modest pricing, quality product, quick reply & on-time delivery. It is then, stress-free for us
+                            to lodge any exact requirements of the customers expertly.
+                        </p>
+                    </div>
+    
+                    <div>
+                        <h3 class="font-medium ">Why Us?</h3>
+                        <p>Modest pricing is based on continuous growth, value engineering & economic practices.
+                        <ul>
+                            <li>The resistance of batch & bulk production.</li>
+                            <li>Rapid reply time & very modest development cost.</li>
+                            <li>Timely delivery across the world</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    </MAIN>
+    
+        <footer id="contact" class="">
+            <div>
+                <div class="bg-gray-600 h-full py-8">
+                    <h3 class="font-semibold flex justify-center text-xl">CONTACT US</h3>
+                    <div class="flex flex-col md:flex-row justify-evenly">
+                        <div class="my-4 md:my-0 ml-2">
+                            <h2 class="font-medium">LOCATE US</h2>
+                            <a href="https://g.co/kgs/Sa5bPPo">
+                                <svg class="w-12 h-10 invert" fill="#000000" version="1.1" id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="-39.57 -39.57 474.85 474.85" xml:space="preserve"
+                                    transform="matrix(-1, 0, 0, 1, 0, 0)">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <path
+                                                d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738 c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388 C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191 c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <p>Address: 5611, Sadar Thana Rd, Pahari Dhiraj, Sadar Bazaar, New Delhi, Delhi, 110006</p>
+                            </a>
+                        </div>
+        
+                        <div class="my-4 md:my-0 ml-2">
+                            <a href="tel:+919811142042">
+                                <h2 class="font-medium">MOBILE PHONE</h2>
+                                <svg class="w-12 h-12 invert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 425" xml:space="preserve"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-1643.122" y1="1228.084" x2="364.885" y2="136.082"><stop offset="0" style="stop-color:#00c9ff"/><stop offset="1" style="stop-color:#3b72de"/></linearGradient><path fill="url(#a)" d="M251.412 333.627h-.001c-6.635 0-20.524-1.104-39.02-8.489-22.628-9.036-44.973-24.489-66.415-45.93-42.707-42.707-58.403-74.463-54.172-109.602.521-4.602 1.648-9.14 3.443-13.873l.02-.049c1.925-4.913 12.92-18.638 16.243-22.728a4.91 4.91 0 0 1 .335-.372c4.056-4.057 9.41-6.291 15.08-6.291 5.44 0 10.521 2.084 14.305 5.867l30.582 30.588c7.983 7.993 7.799 21.174-.411 29.385l-5.081 5.088-7.733 7.722c5.253 9.456 12.452 22.345 25.903 35.797 13.472 13.479 26.355 20.654 35.802 25.889l12.802-12.799c4.051-4.051 9.402-6.284 15.072-6.284 5.435 0 10.516 2.079 14.305 5.853l30.588 30.592c7.975 8 7.79 21.182-.404 29.394a4.88 4.88 0 0 1-.378.342c-4.093 3.321-17.825 14.306-22.7 16.211-4.596 1.784-9.152 2.928-13.939 3.501l-.066.007c-.511.056-1.932.181-4.16.181zm-147.05-174.399c-1.498 3.956-2.435 7.714-2.86 11.492l-.005.036c-3.836 31.798 11.05 61.22 51.382 101.551 47.843 47.84 87.513 51.559 98.532 51.559 1.779 0 2.84-.095 3.103-.121 3.949-.477 7.718-1.425 11.519-2.9 2.339-.914 12.089-8.212 19.875-14.521 4.243-4.419 4.369-11.294.242-15.433l-30.576-30.58c-1.939-1.932-4.574-3.001-7.408-3.001-3.061 0-5.962 1.217-8.17 3.424l-15.407 15.404a4.878 4.878 0 0 1-5.804.824 388.331 388.331 0 0 1-3.076-1.711c-9.945-5.511-23.599-13.075-38.121-27.608-14.514-14.511-22.102-28.176-27.644-38.154l-.293-.53c-.466-.842-.916-1.658-1.361-2.438a4.877 4.877 0 0 1 .787-5.877l10.341-10.325 5.077-5.086c4.409-4.409 4.592-11.398.412-15.584l-30.579-30.586c-1.939-1.938-4.569-3.008-7.402-3.008-2.986 0-5.821 1.159-8.01 3.269-6.302 7.766-13.595 17.501-14.554 19.904z"/></svg>
+                            </a>
+                        </div>
+        
+                        <div class="my-4 md:my-0 ml-2">
+                            <a href="mailto:abcindia5@hotmail.com">
+                                <h2 class="font-medium">MAIL US</h2>
+                                <svg class="w-12 h-12 invert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" xml:space="preserve"><path fill="#18CEF6" d="m16.217 35.917 24.114-21.213 23.534 21.213-9.97 5.855-.696-14.031-25.621-.221-1.274 13.589z"/><path fill="#18CEF6" d="M35.578 38.677c-1.024 0-1.854-.791-1.855-1.766.002-.977.832-1.768 1.855-1.768h8.811c1.024 0 1.854.791 1.855 1.768-.001.976-.831 1.766-1.855 1.768l-8.811-.002z"/><path fill="#233251" d="M40.293 13 15 35.497v25.612h50.255V35.502L40.293 13zm22.876 44.795L49.547 45.423l13.622-7.743v20.115zm-8.608-29.196 7.933 7.15-7.933 4.509V28.599zm-14.278-12.87 11.456 10.326H28.673l11.61-10.326zM27.954 28.044h24.519l.002 13.4-12.149 6.905-12.371-6.914V28.044zm-2.086.506v11.72l-8.092-4.523 8.092-7.197zm-8.783 9.115 13.722 7.67-13.722 12.461V37.665zm15.593 8.716 7.655 4.279 7.354-4.18 13.918 12.64H18.65l14.028-12.739z"/></svg>
+                            </a>
+                        </div>
+        
+                        <div class="my-4 md:my-0 ml-2">
+                            <a href="https://wa.me/919811142042">
+                                <h2 class="font-medium">WHATSAPP</h2>
+                                <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                                    <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
+                                    </svg>                            </a>
+                        </div>
+        
+                        <div class="my-4 md:my-0 ml-2">
+                            <a href="https://www.instagram.com/vansh_overseas?igsh=MW5ieWxiYnVjcG85dg%3D%3D&utm_source=qr">
+                                <h2 class="font-medium">INSTAGRAM</h2>
+                                <svg class="w-12 h-12 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                                    <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path>
+                                    </svg>                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        
+        
+
+</body>
+
+</html>
