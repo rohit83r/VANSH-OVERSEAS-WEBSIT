@@ -28,14 +28,11 @@
         #preloader img {
             width: 150px;
             height: 150px;
-            animation: pulse 20s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+            animation: pulse 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
         }
 
         @keyframes pulse {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(90deg); }
-            50% { transform: rotate(180deg); }
-            75% { transform: rotate(270deg); }  
+            0% { transform: rotate(0deg); } 
             100% { transform: rotate(360deg); }
         }
     </style>
@@ -44,8 +41,10 @@
 
 <body>
     <div id="preloader">
-        <img src="logo.jpg" alt="Vansh Overseas">
-        <p class="ml-2 text-xl">VANSH OVERSEAS</p>
+        <div>
+            <div><img src="logo.jpg" alt="Vansh Overseas"></div>
+            <div class="m-1"> <p class="ml-2 text-2xl font-semibold">VANSH OVERSEAS</p></div>
+        </div>
     </div>
     <script>
         window.addEventListener('load', function() {
@@ -68,13 +67,13 @@
             <div class="nav-links z-10 duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
                     <li>
-                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="/dist/index.html">Home</a>
+                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="index.html">Home</a>
                     </li>
                     <li>
-                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="#about">About</a>
+                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="index.html#about">About</a>
                     </li>
                     <li>
-                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="/dist/cate.html">Categories</a>
+                        <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="cate.html">Categories</a>
                     </li>
                     <li>
                         <a class="nav-link w-16 text-xl font-bold text-white bg-black bg-opacity-50 rounded-md px-2 py-1 hover:bg-opacity-70" href="#contact">Contact Support</a>
@@ -104,17 +103,17 @@
 
         <div class="grid grid-cols-3 gap-4 justify-evenly">
 
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/1.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/2.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/3.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/4.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/5.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/6.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/7.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/8.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/9.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/10.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="/assets/brass/11.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/1.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/2.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/3.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/4.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/5.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/6.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/7.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/8.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/9.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/10.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets/brass/11.jpg" alt="">
 
         </div>
 
@@ -126,96 +125,96 @@
             <h3 class="font-semibold flex justify-start text-2xl p-8"> ⦿ HIGH QUALITY STAINLESS STEEL UTENSILS</h3>
         </div>
         <div><img class=src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\1.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\2.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\3.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\4.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\5.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\6.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\7.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\8.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\9.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\10.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\11.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\12.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\13.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\14.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\15.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\16.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\17.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\18.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\19.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\20.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\21.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\22.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\23.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\24.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\25.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\26.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\27.png" alt=""></div>
-        <div><img class="mx-auto" src="\assets\HIGH QUALITY STAINLESS STEEL UTENSILS\28.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\2.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\3.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\4.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\5.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\6.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\7.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\8.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\9.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\10.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\11.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\12.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\13.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\14.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\15.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\16.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\17.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\18.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\19.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\20.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\21.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\22.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\23.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\24.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\25.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\26.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\27.png" alt=""></div>
+        <div><img class="mx-auto" src="assets\HIGH QUALITY STAINLESS STEEL UTENSILS\28.png" alt=""></div>
     </div>
     <main>
         <div class="grid-cols-1  place-content-center">
             <h3 class="font-semibold flex justify-self-start text-2xl p-8"> ⦿ HIGH QUALITY ALUMINIUM UTENSILS</h3>
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\1.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\1.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\2.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\3.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\4.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\5.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\6.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\7.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\8.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\9.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\12.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\14.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\15.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\16.png" alt="">
-            <img class="mx-auto" src="\assets\HIGH QUALITY ALUMINIUM UTENSILS\17.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\1.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\1.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\2.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\3.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\4.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\5.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\6.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\7.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\8.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\9.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\12.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\14.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\15.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\16.png" alt="">
+            <img class="mx-auto" src="assets\HIGH QUALITY ALUMINIUM UTENSILS\17.png" alt="">
         </div>
 
         <div class="grid grid-cols-3 gap-4 justify-evenly">
-            <img class="w-125 h-343 rounded object-cover" src="\assets\alu\1.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\2.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\3.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\4.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\5.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\6.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\7.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\8.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\9.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\10.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\11.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\12.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\13.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\14.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\15.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\16.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\17.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\18.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\19.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\20.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\21.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\22.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\23.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\24.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\25.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\26.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\27.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\28.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\29.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\30.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\31.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\32.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\33.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\34.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\35.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\36.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\37.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\38.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\39.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\40.jpg" alt="">
-            <img class="w-125 h-34 rounded object-cover " src="\assets\alu\41.jpg" alt="">
+            <img class="w-125 h-343 rounded object-cover" src="assets\alu\1.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\2.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\3.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\4.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\5.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\6.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\7.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\8.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\9.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\10.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\11.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\12.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\13.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\14.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\15.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\16.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\17.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\18.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\19.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\20.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\21.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\22.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\23.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\24.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\25.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\26.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\27.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\28.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\29.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\30.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\31.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\32.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\33.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\34.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\35.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\36.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\37.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\38.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\39.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\40.jpg" alt="">
+            <img class="w-125 h-34 rounded object-cover " src="assets\alu\41.jpg" alt="">
         </div>
 
     </main>
@@ -244,7 +243,7 @@
                                     </g>
                                 </g>
                             </svg>
-                            <p>Address: 5611, Sadar Thana Rd, Pahari Dhiraj, Sadar Bazaar, New Delhi, Delhi, 110006</p>
+                            <p>Address: 5611, Sadar Thana Road, Sadar Bazaar, Delhi, 110006</p>
                         </a>
                     </div>
     
